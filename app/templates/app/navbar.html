@@ -1,7 +1,7 @@
 <div class="nav-div">
     <div class="topnav">
 
-        <a href="{% url 'home' %}" class="nav-title nav-link">CV MAKER</a>
+        <a href="{% url 'home' %}" class="nav-title nav-link">VitaeVault</a>
 
         <div class="nav-link-div">
             <a {% if request.resolver_match.url_name == 'home' %}class="active nav-link"{% else %}class="nav-link"{% endif %} href="{% url 'home' %}">HOME</a>

@@ -1,0 +1,17 @@
+# Query: CV MAKER
+# ContextLines: 1
+
+3 results - 2 files
+
+app\templates\app\home.html:
+  17      <div class="left-div px-5 ">
+  18:         <h1 class="home-title">Welcome to ViteaVault Website</h1>
+  19          <p class="home-desc mb-5">If a sheet of paper represents your entire work life, personality, and skills, it
+  20              better be a pretty amazing piece of paper —
+  21:             Let ViteaVault do the heavy lifting.</p>
+  22          <a href="/login/" class="cv-btn">CREATE YOUR CV NOW</a>
+
+app\templates\app\navbar.html:
+  3  
+  4:         <a href="{% url 'home' %}" class="nav-title nav-link">CV MAKER</a>
+  5  

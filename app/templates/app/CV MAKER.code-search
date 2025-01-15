@@ -1,0 +1,10 @@
+# Query: CV MAKER
+
+3 results - 2 files
+
+app\templates\app\home.html:
+  18:         <h1 class="home-title">Welcome to CV Maker Website</h1>
+  21:             Let ViteaVault do the heavy lifting.</p>
+
+app\templates\app\navbar.html:
+  4:         <a href="{% url 'home' %}" class="nav-title nav-link">CV MAKER</a>

@@ -22,10 +22,10 @@
 
         <table class="my-side-line w-100">
             <tr style="display:flex; flex-direction: row; justify-content:space-between;">
-                <td id="logo"><img style="width: 150px;" src="{% static 'daiictlogo.jpg' %}"></td>
+                <td id="logo"><img style="width: 150px;" src="{% static 'Capture-removebg-preview.png' %}"></td>
                 <td class="w-75">
                     <h2 class="w-100 fw-bold">{{data.fullname}}</h2>
-                    <h3 class="my-3 mb-3 fw-bold heading-title">Dhirubhai Ambani Institute of Information and Communication Technology
+                    
                     </h3>
                     <p class="w-100 d-inline-flex justify-content-between">
                         <span class="w-50 inline-block fw-bold">Email:
@@ -60,14 +60,14 @@
                     <th colspan="1" class="text-start w-35 heading-title">Degree</th>
                     <th colspan="1" class="text-start w-35 heading-title">University/Institute</th>
                     <th colspan="1" class="text-start w-15 heading-title">Year</th>
-                    <th colspan="1" class="text-center w-15 heading-title">CPI/Aggregate</th>
+                    <th colspan="1" class="text-center w-15 heading-title">Department/group</th>    
                 </tr>
             </thead>
             <tbody>
 
                 <tr>
                     <td>
-                        <div class="fw-bold align-top heading-title">B.Tech | ICT</div>
+                        <div class="fw-bold align-top heading-title">Undergraduate</div>
                     </td>
                     <td>
                         <div>{{data.clgname}}</div>
@@ -82,7 +82,7 @@
 
                 <tr>
                     <td>
-                        <div class="fw-bold align-top heading-title">Higher Secondary | Class XII</div>
+                        <div class="fw-bold align-top heading-title">Higher Secondary</div>
                     </td>
                     <td>
                         <div>{{data.cls12name}}</div>
@@ -97,7 +97,7 @@
 
                 <tr>
                     <td>
-                        <div class="fw-bold heading-title">Secondary | Class X</div>
+                        <div class="fw-bold heading-title">Secondary</div>
                     </td>
                     <td>
                         <div>{{data.cls10name}}</div>
@@ -192,35 +192,33 @@
 
         <table class="w-100 my-side-line">
             <thead>
-                <tr>
-                    <td colspan="2" class="section-header">
-                        <h3 class="fw-bold">PROJECTS</h3>
-                    </td>
-                </tr>
+              <tr>
+                <td colspan="2" class="section-header">
+                  <h3 class="fw-bold">PROJECTS</h3>
+                </td>
+              </tr>
             </thead>
             <tbody>
-
-                <tr>
-                    <td class="w-25">
-                        <p>
-                        <div class="fw-bold">{{data.projectname}}</div>
-                        </p>
-                        <p class="fw-bold">Guide:
-                            <span class="fw-normal">{{data.projectguide}}</span>
-                        </p>
-                    </td>
-                    <td class="w-75">
-                        <p>
-                        <div>{{data.projectdesc}}</div>
-                        </p>
-                    </td>
-                </tr>
-
+              <tr>
+                <td colspan="2">
+                  <div class="project-info">
+                    <div class="fw-bold project-name">Project Name: 
+                      <span class="fw-normal">{{data.projectname}}</span>
+                    </div>
+                    <div class="fw-bold project-guide">Guide: 
+                      <span class="fw-normal">{{data.projectguide}}</span>
+                    </div>
+                    <div class="fw-bold discussion">Discussion: 
+                      <span class="fw-normal">{{data.projectdesc}}</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
             </tbody>
-
-        </table>
-        <hr class="my-3" style="border-bottom:2px solid black">
-
+          </table>
+          
+          <hr class="my-3" style="border-bottom: 2px solid black;">
+          
 
         <!-- Section6 -->
 
@@ -246,12 +244,28 @@
                         <table class="w-100 section">
                             <tr>
                                 <td colspan="2" class="section-header">
-                                    <h3 class="fw-bold">INTERESTS AND HOBBIES</h3>
+                                    <h3 class="fw-bold">Additional Sections</h3>
                                     <ul id="hobbies-list">
-                                        <li>{{data.hobby1}}</li>
-                                        <li>{{data.hobby2}}</li>
-                                        <li>{{data.hobby3}}</li>
-                                        <li>{{data.hobby4}}</li>
+                                        <li> </div>
+                                            <div class="fw-bold discussion">Hobby:
+                                                <span class="fw-normal">{{data.hobby1}}</span>
+                                              </li
+                                            </div>
+                                        
+                                        <li> </div>
+                                            <div class="fw-bold discussion">Languages Known:
+                                                <span class="fw-normal">{{data.hobby2}}</span>
+                                              </li
+                                            </div>
+                                        <li> </div>
+                                            <div class="fw-bold discussion">Github Link:
+                                                <span class="fw-normal">{{data.hobby3}}</span>
+                                              </li
+                                            </div>
+                                        <li></div>
+                                    <div class="fw-bold discussion">Volunteer Experience:
+                                      <span class="fw-normal">{{data.hobby4}}</span>
+                                    </div>
                                     </ul>
                                 </td>
                             </tr>
