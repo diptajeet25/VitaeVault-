@@ -13,7 +13,10 @@
 {% endfor %}
 {% endif %}
 
-<button class="btns btn btn-dark" id="download" onclick="PrintDiv()">Download PDF File</button>
+<br>
+<br>
+<br>
+<br>
 
 <div class="resume-page">
     <div id="resume" >
@@ -67,7 +70,7 @@
 
                 <tr>
                     <td>
-                        <div class="fw-bold align-top heading-title">Undergraduate</div>
+                        <div class="fw-bold align-top heading-title"> {{data.clgdeg}} </div>
                     </td>
                     <td>
                         <div>{{data.clgname}}</div>
@@ -76,7 +79,7 @@
                         <div>{{data.clgyear}}</div>
                     </td>
                     <td>
-                        <div class="text-center">{{data.clgcpi}}</div>
+                        <div class="text-center">{{data.clgdept}}</div>
                     </td>
                 </tr>
 
@@ -91,7 +94,7 @@
                         <div>{{data.cls12year}}</div>
                     </td>
                     <td>
-                        <div class="text-center">{{data.cls12cpi}}</div>
+                        <div class="text-center">{{data.cls12group}}</div>
                     </td>
                 </tr>
 
@@ -106,7 +109,7 @@
                         <div>{{data.cls10year}}</div>
                     </td>
                     <td>
-                        <div class="text-center">{{data.cls10cpi}}</div>
+                        <div class="text-center">{{data.cls10group}}</div>
                     </td>
                 </tr>
 
@@ -205,11 +208,18 @@
                     <div class="fw-bold project-name">Project Name: 
                       <span class="fw-normal">{{data.projectname}}</span>
                     </div>
-                    <div class="fw-bold project-guide">Guide: 
-                      <span class="fw-normal">{{data.projectguide}}</span>
-                    </div>
+                
                     <div class="fw-bold discussion">Discussion: 
                       <span class="fw-normal">{{data.projectdesc}}</span>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <div class="fw-bold project-name">Project2 Name: 
+                      <span class="fw-normal">{{data.project2name}}</span>
+                    </div>
+                    
+                    <div class="fw-bold discussion">Discussion: 
+                      <span class="fw-normal">{{data.project2desc}}</span>
                     </div>
                   </div>
                 </td>
@@ -281,5 +291,5 @@
     </div>
 </div>
 
-
+<button class="btns btn btn-dark" id="download" onclick="PrintDiv()">Download PDF File</button>
 {% endblock content %}

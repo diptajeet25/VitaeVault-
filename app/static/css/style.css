@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
 :root {
-  --bgcolor: rgb(59, 155, 185)!important;
+  --bgcolor: rgb(59, 155, 185) !important;
   --fontcolor: #000000;
   --clr: #bcbabe;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -13,19 +15,15 @@
 }
 
 body {
-  background: #fefefe;
-  background: -webkit-linear-gradient(to right, #fafafa, #7fd1e6);
   background: linear-gradient(to right, #fafafa, #7fd1e6);
 }
 
-/* Scrollbar css */
+/* Hide scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
-/* End of scrollbar css */
 
-/* Navbar css */
-
+/* Navbar Styles */
 .nav-div {
   position: fixed;
   top: 15px;
@@ -35,7 +33,6 @@ body {
 
 .topnav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bgcolor);
@@ -43,80 +40,67 @@ body {
   height: 73px;
   margin: auto;
   box-shadow: 0 0 10px var(--bgcolor);
-  transition: 0.5s;
-  background-size: cover;
-  background-position: center;
   border-radius: 5px;
+  transition: 0.5s;
+}
+
+.nav-title {
+  background-color: var(--clr);
+  font-size: 23px;
+  padding: 20px 25px;
+  border-radius: 5px 0 0 5px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .nav-link-div {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
 }
 
-.nav-title {
-  background-color: #000000;
-  background-color: var(--clr);
-  font-size: 23px !important;
-  padding: 20px 25px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  font-style: italic;
-  font-weight: bold; 
-}
-
 .nav-link {
-  display: block;
   color: #050505;
   text-align: center;
   padding: 22px 25px;
-  text-decoration: none;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
   transition: 0.3s;
 }
+
 .nav-link:hover {
   background-color: var(--clr) !important;
-  padding: 22px 25px;
   color: #000000;
 }
+
 .active {
   background-color: var(--clr);
 }
-/* End of Navbar css */
 
-/* Login Signup css */
-
+/* Login/Signup Section */
 .main-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  overflow: scroll;
   margin-top: 85px;
 }
+
 .square-div {
-  background-color: linear-gradient(to right, #fafafa, #7fd1e6);
-  box-shadow: 0 0 10px var(--bgcolor);
-  color: var(--fontcolor);
   width: 500px;
   height: 550px;
-  overflow: auto;
+  box-shadow: 0 0 10px var(--bgcolor);
+  color: var(--fontcolor);
 }
-.square-div:nth-child(1) {
-  overflow: hidden;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+
+.square-div:first-child {
+  border-radius: 10px 0 0 10px;
 }
-.square-div:nth-child(2) {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+
+.square-div:last-child {
+  border-radius: 0 10px 10px 0;
 }
+
 .side-image {
   width: 100%;
   height: 100%;
@@ -125,179 +109,227 @@ body {
 .form-div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  margin-left: 30px; /* Shift the whole form slightly to the right */
 }
+
 .form-div form {
   width: 100%;
 }
+
 .form-div input {
   width: 100%;
   font-size: 17px;
   font-weight: bold;
+  padding-left: 20px; /* Shift each input field slightly to the right */
+  margin-bottom: 15px; /* Add margin between fields */
 }
+
 i {
   margin-right: 10px;
 }
 
-/* End of the Login Signup css */
-
-/* Home page css */
-
+/* Home Page */
 .home-div {
-  width: 100%;
-  height: 550px;
-  margin: auto;
-  margin-top: 120px;
-  border-radius: 8px;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  letter-spacing: 1px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 550px;
+  margin: 120px auto 0;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* Left div */
 .left-div {
   width: 48%;
   margin-right: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 }
+
 .home-title {
   margin-bottom: 60px;
   font-size: 40px;
   font-weight: bold;
 }
+
 .home-desc {
   font-size: 22px;
 }
-/* End of Left div */
 
-/* Right div */
 .right-div {
   width: 40%;
 }
+
 .home-page-image {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
+
 .cv-btn {
   padding: 22px 25px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
   background-color: var(--clr);
+  color: rgb(0, 0, 0);
   border-radius: 4px;
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 1px;
   transition: 0.5s;
 }
+
 .cv-btn:hover {
-  background-color:  #d8cde6;
+  background-color: #d8cde6;
   color: rgb(0, 0, 0);
 }
-/* End of Right div */
 
-/* End of Home page css */
-
-/* Buttons */
-.btns {
-  padding-right: 30px;
-  padding-left: 30px;
-  font-size: 24px !important;
-  font-weight: 600;
-  letter-spacing: 1px;
-  display: block;
-  margin: auto;
-}
-
-.btns-primary {
-  display: block;
-  margin: 0;
-}
-
-#download{
-  margin-top: 120px;
-}
-/* End of Buttons */
-
-/* Resume preview Page */
-
-/* Apply font size for all text inside resume-page */
-
-/* Resume preview Page */
-
-/* Apply font size for all text inside resume-page */
-/* General styles for resume-page */
+/* Resume Preview Page */
 .resume-page {
   width: 792px;
   max-width: 1200px;
-  margin: auto;
+  margin: 30px auto 50px;
   background-color: #ffffff;
   color: var(--fontcolor);
   box-shadow: 0 0 20px var(--bgcolor);
-  font-size: 14px !important; /* Default font size */
-  margin-top: 30px;
-  margin-bottom: 50px;
+  font-size: 14px;
   padding: 20px;
 }
 
-/* Styles for section header (PROJECTS) */
-.resume-page .section-header h3 {
-  font-size: 22px !important; /* Increase heading font size */
+.section-header h3 {
+  font-size: 22px;
 }
 
-/* Styles for project details */
 .project-info .project-name,
 .project-info .project-guide,
 .project-info .discussion {
-  font-size: 18px; /* Increase font size for these sections */
-  margin-bottom: 10px; /* Add spacing between these items */
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Optional: Adjust the font size for normal text within the spans */
 .project-info .fw-normal {
-  font-size: 16px; /* Text inside spans will have slightly smaller font */
+  font-size: 16px;
 }
 
-/* Styling for the horizontal rule */
 hr.my-3 {
   border-bottom: 2px solid black;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
-
-
-/* Dashboard css  */
-
-.input-heading{
+/* Dashboard */
+.input-heading {
   color: #000000;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px;
 }
-.input-section{
-  width: 80%;
+
+.input-section {
+  width: 70%; /* Adjust width of input section */
   margin: auto;
   color: var(--bgcolor);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add space between inputs */
 }
-input, textarea{
-  font-size: 14pt !important;
-  font-weight: 500 !important;
-  letter-spacing: 1px !important;
-}
-input::placeholder, textarea::placeholder{
+
+input,
+textarea {
+  font-size: 14pt;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 14pt;
-  color: black;
+  width: 100%; /* Full width of the container */
+  padding: 10px;
+  margin-bottom: 20px; /* Space below inputs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-label{
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 14pt;
+  font-weight: 500;
+  color: #888; /* Placeholder text color */
+}
+
+label {
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.btns {
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin: 20px auto;
+  background-color: var(--clr);
+  color: #000000;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btns:hover {
+  background-color: #d8cde6;
+  color: #000000;
+}
+
+#download {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Adjustments for the Skills section */
+.input-section.skills-section {
+  width: 70%; /* Adjust width of input section */
+  margin: auto;
+  color: var(--bgcolor);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add space between inputs */
+  margin-right: 20px; /* Shift the Skills section to the right */
+}
+
+/* Shift inputs slightly to the right in the Skills section */
+.skills-section .form-group {
+  margin-left: 10px; /* Shift the input fields slightly right */
+}
+
+/* Add styling for new project2 fields */
+.project2-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between the fields */
+  margin-bottom: 20px;
+}
+
+.project2-info label {
   font-weight: 600;
   letter-spacing: 1px;
 }
-/* End of dashboard css */
+
+.project2-info input,
+.project2-info textarea {
+  font-size: 14pt;
+  font-weight: 500;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Add styling for new fields */
+.project2-info .project2-name,
+.project2-info .project2-guide,
+.project2-info .project2-discussion {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project2-info .project2-discussion {
+  height: 100px; /* Adjust height for the textarea */
+}
